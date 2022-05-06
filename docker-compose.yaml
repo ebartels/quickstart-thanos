@@ -210,6 +210,9 @@ services:
             - '--http-address=0.0.0.0:10902'
             - '--data-dir=/tmp/thanos/store'
             - '--objstore.config-file=/etc/thanos/bucket_config.yaml'
+        ports:
+          - 12091:10091
+          - 12902:10902
         depends_on:
             - minio
         restart: always
